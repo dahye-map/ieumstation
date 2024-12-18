@@ -292,6 +292,7 @@ textanis.forEach((textani, i) => {
 
   let tl = gsap.timeline({
     scrollTrigger: {
+      ease: "none",
       trigger: ".section__text",
       start: () => `top+=${i * window.innerHeight} top`,
       end: () => `top+=${(i + 1) * window.innerHeight} top`,

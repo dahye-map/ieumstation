@@ -23,6 +23,7 @@ $multiplier: 1;
 }
 
 .section {
+  overflow-x: hidden;
   &__loading {
     position: relative;
     width: 100%;
@@ -221,6 +222,11 @@ $multiplier: 1;
   }
   &__service {
     position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+    @include tablet {
+      height: auto;
+    }
     .bg {
       position: absolute;
       height: 100vh;

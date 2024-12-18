@@ -54,6 +54,7 @@ html, body {
   font-size: 10px;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+  line-height: 1.5;
 }
 @media (max-width: 1024px) {
   html, body {

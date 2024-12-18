@@ -13,6 +13,9 @@
   }
 }
 
+.section {
+  overflow-x: hidden;
+}
 .section__loading {
   position: relative;
   width: 100%;
@@ -613,6 +616,13 @@
 }
 .section__service {
   position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+}
+@media (max-width: 1024px) {
+  .section__service {
+    height: auto;
+  }
 }
 .section__service .bg {
   position: absolute;
