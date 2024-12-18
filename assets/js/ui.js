@@ -484,10 +484,18 @@ let scrollPortfolio = gsap.to('.portfolio-list__wrap', {
 });
 
 ScrollTrigger.matchMedia({
-  "(min-width: 992px)": function() {
+  "(min-width: 1025px)": function() {
     scrollPortfolio.scrollTrigger.enable();
   },
-  "(max-width: 991px)": function() {
+  "(max-width: 1024px)": function() {
     scrollPortfolio.scrollTrigger.disable();
+  }
+});
+ScrollTrigger.matchMedia({
+  "(min-width: 1025px)": function() {
+    service.scrollTrigger.enable();
+  },
+  "(max-width: 1024px)": function() {
+    service.scrollTrigger.disable();
   }
 });

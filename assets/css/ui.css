@@ -610,13 +610,11 @@
 }
 @media (max-width: 800px) {
   .section__intro .intro-text__desc {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 .section__service {
   position: relative;
-  overflow: hidden;
-  height: 100vh;
 }
 .section__service .bg {
   position: absolute;
@@ -638,6 +636,11 @@
   justify-content: center;
   text-align: center;
   height: 100vh;
+}
+@media (max-width: 1024px) {
+  .section__service .service-text__wrap {
+    height: auto;
+  }
 }
 .section__service .service-text__wrap .title {
   font-size: 10rem;
@@ -691,6 +694,11 @@
   padding-top: 10rem;
   margin-top: 30rem;
   text-align: center;
+}
+@media (max-width: 1024px) {
+  .section__service .service-list {
+    margin-top: 16rem;
+  }
 }
 .section__service .service-list > .criterion {
   position: absolute;
@@ -1236,6 +1244,7 @@
 }
 .section__process {
   padding-top: 40rem;
+  overflow-x: hidden;
 }
 @media (max-width: 1024px) {
   .section__process {

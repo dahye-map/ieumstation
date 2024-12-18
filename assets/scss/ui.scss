@@ -216,15 +216,13 @@ $multiplier: 1;
           font-size: 2.4rem;
         }
         @include mobile {
-          font-size: 1.6rem;
+          font-size: 1.8rem;
         }
       }
     }
   }
   &__service {
     position: relative;
-    overflow: hidden;
-    height: 100vh;
     .bg {
       position: absolute;
       height: 100vh;
@@ -247,6 +245,9 @@ $multiplier: 1;
           @include column-flexbox();
           text-align: center;
           height: 100vh;
+          @include tablet {
+            height: auto;
+          }
           .title {
             font-size: 10rem;
             font-weight: bold;
@@ -291,6 +292,9 @@ $multiplier: 1;
         padding-top: 10rem;
         margin-top: 30rem;
         text-align: center;
+        @include tablet {
+          margin-top: 16rem;
+        }
         & > .criterion {
           position: absolute;
           left: 49%;
@@ -351,6 +355,7 @@ $multiplier: 1;
   }
   &__process {
     padding-top: 40rem;
+    overflow-x: hidden;
     @include tablet {
       padding-top: 16rem;
     }
