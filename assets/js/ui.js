@@ -446,65 +446,26 @@ let processAni = gsap.to(".process-ani", {
 gsap.set(".process-list__wrap", {
   perspective: "900px",
 });
-gsap.to(".process-list__wrap li:nth-of-type(1)", {
-  scale: 0.8,
-  rotateX: "-10deg",
-  backgroundColor: "#403f3f",
-  immediateRender: true,
-  scrollTrigger: {
-    trigger: ".process-list__wrap li:nth-of-type(1)",
-    start: "top 55%",
-    endTrigger: ".process-list__wrap li:nth-of-type(3)",
-    end: "top 0%",
-    scrub: true,
-    // markers: true,
-  },
-});
-
-gsap.to(".process-list__wrap li:nth-of-type(2)", {
-  scale: 0.85,
-  rotateX: "-10deg",
-  backgroundColor: "#403f3f",
-  immediateRender: true,
-  scrollTrigger: {
-    trigger: ".process-list__wrap li:nth-of-type(2)",
-    start: "top 50%",
-    endTrigger: ".process-list__wrap li:nth-of-type(4)",
-    end: "top 0%",
-    scrub: true,
-    // markers: true,
-  },
-});
-
-gsap.to(".process-list__wrap li:nth-of-type(3)", {
-  scale: 0.9,
-  rotateX: "-10deg",
-  backgroundColor: "#403f3f",
-  immediateRender: true,
-  scrollTrigger: {
-    trigger: ".process-list__wrap li:nth-of-type(3)",
-    start: "top 50%",
-    endTrigger: ".process-list__wrap li:nth-of-type(4)",
-    end: "top 0%",
-    scrub: true,
-    // markers: true,
-  },
-});
-// });
-
-gsap.to(".process-list__wrap li:nth-of-type(4)", {
-  scale: 0.95,
-  rotateX: "-10deg",
-  backgroundColor: "#403f3f",
-  immediateRender: true,
-  scrollTrigger: {
-    trigger: ".process-list__wrap li:nth-of-type(4)",
-    start: "top 50%",
-    end: "top 0%",
-    scrub: true,
-    // markers: true,
-  },
-});
+for (let i = 1; i <= 8; i++) {
+  gsap.to(`.process-list__wrap li:nth-of-type(${i})`, {
+    scale: 0.6 + i * 0.05, // 항목마다 조금씩 커지는 효과
+    rotateX: "-10deg", // 동일한 회전 효과
+    backgroundColor: "#403f3f", // 동일한 배경색
+    immediateRender: true,
+    scrollTrigger: {
+      trigger: `.process-list__wrap li:nth-of-type(${i})`,
+      start: "top 50%", // 각 항목의 시작 지점
+      end: i === 8 
+        ? "top 0%" // 마지막 항목은 별도의 종료 지점
+        : `top ${50 - i * 5}%`, // 중간 항목들은 종료 지점을 점진적으로 변경
+      endTrigger: i < 8 
+        ? `.process-list__wrap li:nth-of-type(${i + 1})` 
+        : undefined, // 다음 항목을 기준으로 종료 트리거 설정
+      scrub: true, // 스크롤에 맞춰 동기화
+      // markers: true, // 디버깅용 마커
+    },
+  });
+}
 
 let portfolio = document.querySelector('.portfolio-list__wrap');
 let sections = gsap.utils.toArray(".portfolio-list");
