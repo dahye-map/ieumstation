@@ -458,9 +458,9 @@
   font-size: 6.4rem;
   text-align: center;
   font-weight: 600;
-  line-height: 1.5;
   font-family: "Paperlogy" !important;
   color: #fff;
+  will-change: transform, opacity;
 }
 @media (max-width: 1024px) {
   .section__text .text-ani {
@@ -581,7 +581,6 @@
 .section__intro .intro-text__title {
   font-size: 6.4rem;
   font-weight: 500;
-  line-height: 1.3;
   font-family: "Paperlogy" !important;
   color: #fff;
 }
@@ -599,7 +598,6 @@
   font-size: 3rem;
   padding-top: 3rem;
   font-weight: 300;
-  line-height: 1.6;
   font-family: "Paperlogy" !important;
   color: #fff;
 }
@@ -673,7 +671,6 @@
 .section__service .service-text__wrap .desc {
   font-size: 2.4rem;
   padding-top: 6rem;
-  line-height: 2;
   font-family: "Paperlogy";
   color: #fff;
 }
@@ -1221,7 +1218,6 @@
   font-size: 3.2rem;
   font-weight: 500;
   padding: 10rem 0 6rem;
-  line-height: 1.5;
   font-family: "Paperlogy";
   color: #fff;
 }
@@ -1233,7 +1229,6 @@
 }
 .section__service .service-list__wrap .desc {
   font-size: 2.4rem;
-  line-height: 1.8;
   font-family: "Paperlogy";
   color: #fff;
 }
@@ -1284,6 +1279,7 @@
   border: 2px solid #272727;
   position: sticky;
   top: 80px;
+  will-change: transform, opacity;
 }
 @media (max-width: 1024px) {
   .section__process .process-list {
