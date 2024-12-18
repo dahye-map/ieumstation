@@ -13,6 +13,10 @@
   }
 }
 
+.section > * {
+  font-family: "Paperlogy" !important;
+  color: #fff;
+}
 .section__loading {
   position: relative;
   width: 100%;
