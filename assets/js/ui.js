@@ -275,7 +275,7 @@ setTimeout(() => {
     'height': '100%',
     'overflow': 'auto'
   })
-}, 100);
+}, 4000);
 
 
 ScrollTrigger.create({

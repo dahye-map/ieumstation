@@ -91,14 +91,14 @@ $multiplier: 1;
       color: #fff;
       will-change: transform, opacity;
       @include tablet {
-        font-size: 5.6rem;
+        font-size: 4.8rem;
       }
       @include mobile {
-        font-size: 4.8rem;
+        font-size: 3.2rem;
       }
       span > img {
         @include mobile {
-          width: 56%;
+          width: 60%;
         }
       }
       .typing-ani {
@@ -199,10 +199,10 @@ $multiplier: 1;
         font-family: 'Paperlogy' !important;
         color: #fff;
         @include tablet {
-          font-size: 6rem;
+          font-size: 4.8rem;
         }
         @include mobile {
-          font-size: 4.8rem;
+          font-size: 3.2rem;
         }
       }
       &__desc {
@@ -258,7 +258,7 @@ $multiplier: 1;
             color: $txt_primary;
             font-family: 'Paperlogy';
             @include tablet {
-              font-size: 6rem;
+              font-size: 6.4rem;
             }
             @include mobile {
               font-size: 4.8rem;
@@ -271,7 +271,11 @@ $multiplier: 1;
             font-family: 'Paperlogy';
             color: #fff;
             @include tablet {
-              font-size: 3.2rem;
+              font-size: 2.8rem;
+              padding-top: 4rem;
+            }
+            @include mobile {
+              font-size: 2.4rem;
             }
           }
           .desc {
@@ -283,9 +287,11 @@ $multiplier: 1;
               width: 70%;
               margin: 0 auto;
               font-size: 1.8rem;
+              padding-top: 2rem;
             }
             @include mobile {
               width: 100%;
+              font-size: 1.6rem;
             }
           }
         }
@@ -330,6 +336,9 @@ $multiplier: 1;
             @include tablet {
               font-size: 3.2rem;
             }
+            @include mobile {
+              font-size: 2.8rem;
+            }
           }
           .sub-title {
             font-size: 3.2rem;
@@ -341,6 +350,10 @@ $multiplier: 1;
               font-size: 2.8rem;
               padding: 6rem 0 4rem;
             }
+            @include mobile {
+              font-size: 2.4rem;
+              padding: 4rem 0 2rem;
+            }
           }
           .desc {
             font-size: 2.4rem;
@@ -348,6 +361,9 @@ $multiplier: 1;
             color: #fff;
             @include tablet {
               font-size: 1.8rem;
+            }
+            @include mobile {
+              font-size: 1.6rem;
             }
           }
         }
@@ -393,6 +409,10 @@ $multiplier: 1;
           flex-wrap: wrap;
           padding: 4rem 6rem;
         }
+        @include mobile {
+          padding: 2.4rem 4rem;
+          border-radius: 3rem;
+        }
         & + .process-list {
           margin-top: 1.6rem;
         }
@@ -406,10 +426,10 @@ $multiplier: 1;
             font-family: 'Paperlogy';
             color: #fff;
             @include tablet {
-              font-size: 4rem;
+              font-size: 4.8rem;
             }
             @include mobile {
-              font-size: 3.2rem;
+              font-size: 2.4rem;
             }
           }
           &-ko {
@@ -432,6 +452,7 @@ $multiplier: 1;
           }
         }
         &__wrap {
+          position: relative;
           padding: 12rem 3% 20rem;
           @include tablet {
             padding: 6rem 3% 10rem
@@ -456,7 +477,7 @@ $multiplier: 1;
       text-align: center;
       font-family: 'Paperlogy';
       @include tablet {
-        font-size: 6rem;
+        font-size: 6.4rem;
       }
       @include mobile {
         font-size: 4.8rem;
@@ -506,6 +527,10 @@ $multiplier: 1;
         padding: 4rem;
         font-size: 3.2rem;
         border-width: 2px;
+      }
+      @include mobile {
+        font-size: 2.8rem;
+        padding: 2.4rem 3.6rem;
       }
     }
   }

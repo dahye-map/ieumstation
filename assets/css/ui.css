@@ -467,17 +467,17 @@
 }
 @media (max-width: 1024px) {
   .section__text .text-ani {
-    font-size: 5.6rem;
-  }
-}
-@media (max-width: 800px) {
-  .section__text .text-ani {
     font-size: 4.8rem;
   }
 }
 @media (max-width: 800px) {
+  .section__text .text-ani {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 800px) {
   .section__text .text-ani span > img {
-    width: 56%;
+    width: 60%;
   }
 }
 .section__text .text-ani .typing-ani:after {
@@ -589,12 +589,12 @@
 }
 @media (max-width: 1024px) {
   .section__intro .intro-text__title {
-    font-size: 6rem;
+    font-size: 4.8rem;
   }
 }
 @media (max-width: 800px) {
   .section__intro .intro-text__title {
-    font-size: 4.8rem;
+    font-size: 3.2rem;
   }
 }
 .section__intro .intro-text__desc {
@@ -658,7 +658,7 @@
 }
 @media (max-width: 1024px) {
   .section__service .service-text__wrap .title {
-    font-size: 6rem;
+    font-size: 6.4rem;
   }
 }
 @media (max-width: 800px) {
@@ -675,7 +675,13 @@
 }
 @media (max-width: 1024px) {
   .section__service .service-text__wrap .sub-title {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
+    padding-top: 4rem;
+  }
+}
+@media (max-width: 800px) {
+  .section__service .service-text__wrap .sub-title {
+    font-size: 2.4rem;
   }
 }
 .section__service .service-text__wrap .desc {
@@ -689,11 +695,13 @@
     width: 70%;
     margin: 0 auto;
     font-size: 1.8rem;
+    padding-top: 2rem;
   }
 }
 @media (max-width: 800px) {
   .section__service .service-text__wrap .desc {
     width: 100%;
+    font-size: 1.6rem;
   }
 }
 .section__service .service-list {
@@ -1224,6 +1232,11 @@
     font-size: 3.2rem;
   }
 }
+@media (max-width: 800px) {
+  .section__service .service-list__wrap .title {
+    font-size: 2.8rem;
+  }
+}
 .section__service .service-list__wrap .sub-title {
   font-size: 3.2rem;
   font-weight: 500;
@@ -1237,6 +1250,12 @@
     padding: 6rem 0 4rem;
   }
 }
+@media (max-width: 800px) {
+  .section__service .service-list__wrap .sub-title {
+    font-size: 2.4rem;
+    padding: 4rem 0 2rem;
+  }
+}
 .section__service .service-list__wrap .desc {
   font-size: 2.4rem;
   font-family: "Paperlogy";
@@ -1245,6 +1264,11 @@
 @media (max-width: 1024px) {
   .section__service .service-list__wrap .desc {
     font-size: 1.8rem;
+  }
+}
+@media (max-width: 800px) {
+  .section__service .service-list__wrap .desc {
+    font-size: 1.6rem;
   }
 }
 .section__process {
@@ -1297,6 +1321,12 @@
     padding: 4rem 6rem;
   }
 }
+@media (max-width: 800px) {
+  .section__process .process-list {
+    padding: 2.4rem 4rem;
+    border-radius: 3rem;
+  }
+}
 .section__process .process-list + .process-list {
   margin-top: 1.6rem;
 }
@@ -1311,12 +1341,12 @@
 }
 @media (max-width: 1024px) {
   .section__process .process-list .title-eng {
-    font-size: 4rem;
+    font-size: 4.8rem;
   }
 }
 @media (max-width: 800px) {
   .section__process .process-list .title-eng {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
 }
 .section__process .process-list .title-ko {
@@ -1342,6 +1372,7 @@
   }
 }
 .section__process .process-list__wrap {
+  position: relative;
   padding: 12rem 3% 20rem;
 }
 @media (max-width: 1024px) {
@@ -1372,7 +1403,7 @@
 }
 @media (max-width: 1024px) {
   .section__portfolio .title {
-    font-size: 6rem;
+    font-size: 6.4rem;
   }
 }
 @media (max-width: 800px) {
@@ -1432,6 +1463,12 @@
     padding: 4rem;
     font-size: 3.2rem;
     border-width: 2px;
+  }
+}
+@media (max-width: 800px) {
+  .btn__wrap .btn-contact__big {
+    font-size: 2.8rem;
+    padding: 2.4rem 3.6rem;
   }
 }
 
