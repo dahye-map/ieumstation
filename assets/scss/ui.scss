@@ -270,16 +270,13 @@ $multiplier: 1;
       }
     }
     .why__title {
-      font-size: 7.2rem;
+      font-size: 6.4rem;
       font-weight: 700;
       font-family: 'Paperlogy';
       color: $txt_primary;
       @include tablet {
-        font-size: 6.4rem;
-        text-align: center;
-      }
-      @include mobile {
         font-size: 4.8rem;
+        text-align: center;
       }
     }
     .accordion {
@@ -291,18 +288,15 @@ $multiplier: 1;
         }
       }
       &__list {
-        padding: 6rem 0;
+        padding: 4rem 0;
         border-top: 1px solid $white;
-        @include tablet {
-          padding: 4rem 0;
-        }
         @include mobile {
           padding: 2.4rem 0;
         }
       }
       &__title {
         position: relative;
-        font-size: 4.8rem;
+        font-size: 3.2rem;
         font-family: 'Paperlogy';
         color: $white;
         font-weight: 500;
@@ -311,16 +305,14 @@ $multiplier: 1;
           content:'';
           position: absolute;
           right: 23px;
-          top: 12px;
-          width: 4px;
-          height: 50px;
+          top: 8px;
+          width: 2px;
+          height: 40px;
           background-color: $primary_color;
           @include tablet {
             content:'';
             right: 18px;
             top: 0px;
-            width: 2px;
-            height: 40px;
           }
           @include mobile {
             content:'';
@@ -333,17 +325,15 @@ $multiplier: 1;
         &:after {
           content:'';
           position: absolute;
-          right: 0;
-          top: 35px;
-          width: 50px;
-          height: 4px;
+          right: 4px;
+          top: 27px;
+          width: 40px;
+          height: 2px;
           background-color: $primary_color;
           @include tablet {
             content:'';
             right: 0;
             top: 19px;
-            width: 40px;
-            height: 2px;
           }
           @include mobile {
             content:'';

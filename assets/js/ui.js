@@ -428,7 +428,7 @@ service.to('.bg', {
   duration: .1,
 });
 service.to('.service-box__wrap', {
-  transform: 'translateY(-80%)',
+  transform: 'translateY(-100%)',
   duration: 3,
 });
 

@@ -669,20 +669,15 @@
   }
 }
 .section__why .why__title {
-  font-size: 7.2rem;
+  font-size: 6.4rem;
   font-weight: 700;
   font-family: "Paperlogy";
   color: #ff811b;
 }
 @media (max-width: 1024px) {
   .section__why .why__title {
-    font-size: 6.4rem;
-    text-align: center;
-  }
-}
-@media (max-width: 800px) {
-  .section__why .why__title {
     font-size: 4.8rem;
+    text-align: center;
   }
 }
 .section__why .accordion__wrap {
@@ -695,13 +690,8 @@
   }
 }
 .section__why .accordion__list {
-  padding: 6rem 0;
+  padding: 4rem 0;
   border-top: 1px solid #fff;
-}
-@media (max-width: 1024px) {
-  .section__why .accordion__list {
-    padding: 4rem 0;
-  }
 }
 @media (max-width: 800px) {
   .section__why .accordion__list {
@@ -710,7 +700,7 @@
 }
 .section__why .accordion__title {
   position: relative;
-  font-size: 4.8rem;
+  font-size: 3.2rem;
   font-family: "Paperlogy";
   color: #fff;
   font-weight: 500;
@@ -720,9 +710,9 @@
   content: "";
   position: absolute;
   right: 23px;
-  top: 12px;
-  width: 4px;
-  height: 50px;
+  top: 8px;
+  width: 2px;
+  height: 40px;
   background-color: #ff811b;
 }
 @media (max-width: 1024px) {
@@ -730,8 +720,6 @@
     content: "";
     right: 18px;
     top: 0px;
-    width: 2px;
-    height: 40px;
   }
 }
 @media (max-width: 800px) {
@@ -746,10 +734,10 @@
 .section__why .accordion__title:after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 35px;
-  width: 50px;
-  height: 4px;
+  right: 4px;
+  top: 27px;
+  width: 40px;
+  height: 2px;
   background-color: #ff811b;
 }
 @media (max-width: 1024px) {
@@ -757,8 +745,6 @@
     content: "";
     right: 0;
     top: 19px;
-    width: 40px;
-    height: 2px;
   }
 }
 @media (max-width: 800px) {
