@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 4rem;
+  padding: 2.4rem 3%;
 }
 .header__inner .logo {
   display: block;
@@ -665,7 +665,7 @@
   .section__why .section__inner {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10rem 3%;
+    padding: 10rem 3% 20rem;
   }
 }
 .section__why .why__title {
@@ -701,6 +701,11 @@
 @media (max-width: 1024px) {
   .section__why .accordion__list {
     padding: 4rem 0;
+  }
+}
+@media (max-width: 800px) {
+  .section__why .accordion__list {
+    padding: 2.4rem 0;
   }
 }
 .section__why .accordion__title {
@@ -765,12 +770,12 @@
 }
 @media (max-width: 1024px) {
   .section__why .accordion__title {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
 }
 @media (max-width: 800px) {
   .section__why .accordion__title {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
 .section__why .accordion__con {
@@ -783,6 +788,7 @@
 @media (max-width: 1024px) {
   .section__why .accordion__con {
     font-size: 1.6rem;
+    padding-top: 2.4rem;
   }
 }
 .section__service {
