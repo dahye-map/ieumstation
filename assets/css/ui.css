@@ -867,6 +867,7 @@
   padding-top: 6rem;
   font-family: "Paperlogy";
   color: #fff;
+  font-weight: 300;
 }
 @media (max-width: 1024px) {
   .section__service .service-text__wrap .desc {
@@ -1444,6 +1445,7 @@
   font-size: 2.4rem;
   font-family: "Paperlogy";
   color: #fff;
+  font-weight: 300;
 }
 @media (max-width: 1024px) {
   .section__service .service-list__wrap .desc {
@@ -1549,6 +1551,7 @@
   padding-top: 1.6rem;
   font-family: "Paperlogy";
   color: #fff;
+  font-weight: 300;
 }
 @media (max-width: 1024px) {
   .section__process .process-list .title-desc {
