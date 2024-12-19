@@ -740,7 +740,7 @@
     width: 1px;
     height: 24px;
     right: 12px;
-    top: 7px;
+    top: 2px;
   }
 }
 .section__why .accordion__title:after {
@@ -766,6 +766,7 @@
     content: "";
     width: 24px;
     height: 1px;
+    top: 14px;
   }
 }
 @media (max-width: 1024px) {
