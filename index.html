@@ -4,11 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="shortcut icon" href="./assets/images/favicon.ico">
+  <link rel="icon" href="./assets/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="./assets/images/favicon/favicon-48x48.png" sizes="48x48">
+  <link rel="icon" href="./assets/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" href="./assets/images/favicon/favicon-144x144.png" sizes="144x144">
+
   <link rel="stylesheet" href="./assets/css/common.css">
   <link rel="stylesheet" href="./assets/css/ui.css">
-  <title>Document</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/images/img_meta.jpg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
+  <meta property="og:title" content="이음스테이션 | ieumstation" />
+  <meta property="og:site_name" content="이음스테이션" />
+  <meta property="og:description" content="당신의 아이디어와 세상을 잇는 이음스테이션" />
+  <meta property="og:keywords" content="웹사이트 제작, 반응형 웹디자인, 맞춤형 홈페이지 제작, 기업 홈페이지 제작, 이음스테이션, 웹 에이전시, 홈페이지 리뉴얼, UI/UX 디자인, 쇼핑몰 제작, 포트폴리오 제작, 모바일 웹 제작, SEO 최적화, 브랜드 홈페이지 제작, 웹 전문가, 웹디자인, 개인 홈페이지 제작, 전문 웹 제작, 웹 유지보수 서비스, 창업 홈페이지 제작, 웹 퍼블리싱, 퍼블리싱, 아임웹 제작, 커스텀 디자인, 커스텀 퍼블리싱, 커스텀 개발" />
+  <meta name="description" content="당신의 아이디어와 세상을 잇는 이음스테이션" />
+  <meta name="keywords" content="웹사이트 제작, 반응형 웹디자인, 맞춤형 홈페이지 제작, 기업 홈페이지 제작, 이음스테이션, 웹 에이전시, 홈페이지 리뉴얼, UI/UX 디자인, 쇼핑몰 제작, 포트폴리오 제작, 모바일 웹 제작, SEO 최적화, 브랜드 홈페이지 제작, 웹 전문가, 웹디자인, 개인 홈페이지 제작, 전문 웹 제작, 웹 유지보수 서비스, 창업 홈페이지 제작, 웹 퍼블리싱, 퍼블리싱, 아임웹 제작, 커스텀 디자인, 커스텀 퍼블리싱, 커스텀 개발" />
+  <title>이음스테이션 | ieumstation</title>
 </head>
 <body>
+  <header class="header">
+    <div class="header__inner">
+      <h1><a href="#" class="logo"><span class="blind">이음스테이션</span></a></h1>
+      <div class="btn__wrap">
+        <a href="" class="btn-contact btn-contact__small">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
   <!-- s: 로딩 -->
   <section class="section section__loading">
     <div class="loading-ani__wrap">
@@ -89,19 +115,39 @@
   <!-- //e: intro -->
 
   <!-- s: Why Choose ieum station? -->
-  <!-- <section class="section section__why">
+  <section class="section section__why">
     <div class="section__inner">
       <div class="why__title">
         Why Choose <br>
         ieum station?
       </div>
       <div class="accordion__wrap">
-        <div class="accordion__title">
-          
+        <div class="accordion__list">
+          <div class="accordion__title">7년 경력의 웹 전문가</div>
+          <div class="accordion__con">
+            프론트엔드 개발자로서 7년간 쌓아온 실무경험을 바탕으로 제작합니다. <br>
+            홈페이지 제작이 막막하게 느끼셨던 홈페이지 제작을 <br>
+            기획부터 개발까지 확실하게 해결해드립니다.
+          </div>
+        </div>
+        <div class="accordion__list">
+          <div class="accordion__title">UI/UX를 생각한 1:1 맞춤 디자인</div>
+          <div class="accordion__con">
+            단순히 보기 좋은 웹사이트가 아닌, 사용자 경험을 중심에 둔 실용적이고 
+            매력적인 디자인을 제공합니다. 
+          </div>
+        </div>
+        <div class="accordion__list">
+          <div class="accordion__title">쉽고 빠른 유지보수</div>
+          <div class="accordion__con">
+            아임웹 솔루션을 사용해 드래그 앤 드랍으로 쉽고 직관적인 유지보수가 가능합니다. <br>
+            1:1 맞춤 교육을 통해 손쉽게 관리 가능합니다. <br>
+            아임웹이 아니더라도 제작 가능합니다.
+          </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- //e: Why Choose ieum station? -->
 
   <!-- s: our service -->
@@ -266,6 +312,7 @@
   </section>
   <!-- //e: Project process -->
 
+  <!-- s: Portfolio -->
   <section class="section section__portfolio">
     <p class="title">Portfolio</p>
 
@@ -278,6 +325,21 @@
       </div>
     </div>
   </section>
+  <!-- //e: Portfolio -->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <p>68, Gomdallae-ro, Gangseo-gu, Seoul, Republic of Korea</p>
+        <div class="sns-wrap">
+          <a href="https://www.instagram.com/ieum_station/?igsh=ejdwYWUwMnY2cHUw" target="_blank">Instagram</a>
+          <a href="http://pf.kakao.com/_nAwdn/chat" target="_blank">Kakao talk</a>
+        </div>
+        <p class="email">ieum@ieumstation.com</p>
+      </div>
+      <p class="copy">© 2025 IEUMSTATION. All rights reserved.</p>
+    </div>
+  </footer>
 
 
   <script id="vertexShader" type="x-shader/x-vertex">

@@ -3,12 +3,33 @@
 $size-of-shape: 40;
 $number-of-frames: 40;
 $number-of-shapes: 3;
-$mult-number: 120;
+$mult-number: 360 / $number-of-shapes;
 $dist: 40;
-$split: 5;
+
 $number-of-items: 8;
 $animation-time: 2s;
 $multiplier: 1;
+
+// 기본 설정
+:root {
+  --size-of-shape: #{$size-of-shape}px;
+  --number-of-frames: #{$number-of-frames};
+  --number-of-shapes: #{$number-of-shapes};
+  --mult-number: #{360 / $number-of-shapes};
+  --dist: #{$dist}px;
+}
+
+// 모바일 991px 이하
+@media (max-width: 1024px) {
+  :root {
+    --size-of-shape: 20px;
+    --number-of-frames: 20;
+    --number-of-shapes: 3;
+    --mult-number: #{360 / 3};
+    --dist: 20px;
+  }
+}
+
 
 .pc-only {
   @include tablet {
@@ -22,6 +43,22 @@ $multiplier: 1;
   }
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  &__inner {
+    @include flexbox($js:between);
+    padding: 3rem 4rem;
+    .logo {
+      display: block;
+      width: 9.3rem;
+      height: 2.4rem;
+      @include bgimage('../images/logo.png', $size:contain, $pos:center center);
+    }
+  }
+}
 .section {
   overflow-x: hidden;
   &__loading {
@@ -95,6 +132,7 @@ $multiplier: 1;
       }
       @include mobile {
         font-size: 3.2rem;
+        top: 45%;
       }
       span > img {
         @include mobile {
@@ -209,13 +247,122 @@ $multiplier: 1;
         font-size: 3rem;
         padding-top: 3rem;
         font-weight: 300;
-        font-family: 'Paperlogy' !important;
+        font-family: 'Paperlogy';
         color: #fff;
         @include tablet {
           font-size: 2.4rem;
         }
         @include mobile {
           font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  &__why {
+    .section__inner {
+      @include flexbox($js:between, $ai:start);
+      gap: 6rem;
+      padding: 20rem 3%;
+      @include tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10rem 3%;
+      }
+    }
+    .why__title {
+      font-size: 7.2rem;
+      font-weight: 700;
+      font-family: 'Paperlogy';
+      color: $txt_primary;
+      @include tablet {
+        font-size: 6.4rem;
+        text-align: center;
+      }
+      @include mobile {
+        font-size: 4.8rem;
+      }
+    }
+    .accordion {
+      &__wrap {
+        width: 60%;
+        border-bottom: 1px solid $white;
+        @include tablet {
+          width: 100%;
+        }
+      }
+      &__list {
+        padding: 6rem 0;
+        border-top: 1px solid $white;
+        @include tablet {
+          padding: 4rem 0;
+        }
+      }
+      &__title {
+        position: relative;
+        font-size: 4.8rem;
+        font-family: 'Paperlogy';
+        color: $white;
+        font-weight: 500;
+        padding-right: 6rem;
+        &:before {
+          content:'';
+          position: absolute;
+          right: 23px;
+          top: 12px;
+          width: 4px;
+          height: 50px;
+          background-color: $primary_color;
+          @include tablet {
+            content:'';
+            right: 18px;
+            top: 0px;
+            width: 2px;
+            height: 40px;
+          }
+          @include mobile {
+            content:'';
+            width: 1px;
+            height: 24px;
+            right: 12px;
+            top: 7px;
+          }
+        }
+        &:after {
+          content:'';
+          position: absolute;
+          right: 0;
+          top: 35px;
+          width: 50px;
+          height: 4px;
+          background-color: $primary_color;
+          @include tablet {
+            content:'';
+            right: 0;
+            top: 19px;
+            width: 40px;
+            height: 2px;
+          }
+          @include mobile {
+            content:'';
+            width: 24px;
+            height: 1px;
+          }
+        }
+        @include tablet {
+          font-size: 3.2rem;
+        }
+        @include mobile {
+          font-size: 2.4rem;
+        }
+      }
+      &__con {
+        display: none;
+        font-size: 2.4rem;
+        font-family: 'Paperlogy';
+        color: $white;
+        padding-top: 4rem;
+        @include tablet {
+          font-size: 1.6rem;
         }
       }
     }
@@ -303,6 +450,7 @@ $multiplier: 1;
         text-align: center;
         @include tablet {
           margin-top: 16rem;
+          padding-top: 7rem;
         }
         & > .criterion {
           position: absolute;
@@ -310,10 +458,13 @@ $multiplier: 1;
           top: 0;
           width: 20rem;
           height: 20rem;
+          @include mobile {
+            left: 48%;
+          }
           & > span {
             position: absolute;
-            width: #{$size-of-shape}px;
-            height: #{$size-of-shape}px;
+            width: var(--size-of-shape);
+            height: var(--size-of-shape);
             border-radius: 50%;
             background-color: #fff;
           }
@@ -513,8 +664,42 @@ $multiplier: 1;
 .btn__wrap {
   @include flexbox();
   .btn-contact {
+    position: relative;
     display: inline-block;
     text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      background-color: $white;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &:before {
+      left: -20px;
+      transform: translate(-50%, -50%);
+    }
+    &:after {
+      right: -20px;
+      transform: translate(50%, -50%);
+    }
+    &:hover {
+      color: $black;
+      &:before {
+        animation: criss-cross-left 0.8s both;
+        animation-direction: alternate;
+      }
+      &:after {
+        animation: criss-cross-right 0.8s both;
+        animation-direction: alternate;
+      }
+    }
     &__big {
       font-size: 7.4rem;
       font-weight: 700;
@@ -532,6 +717,76 @@ $multiplier: 1;
         font-size: 2.8rem;
         padding: 2.4rem 3.6rem;
       }
+    }
+    &__small {
+      font-size: 1.6rem;
+      font-weight: 500;
+      border-radius: 16rem;
+      border:1px solid $white;
+      padding: 1rem 1.4rem;
+      font-family: 'Paperlogy';
+      color: #fff;
+    }
+  }
+}
+
+.footer {
+  &__inner {
+    margin: 0 3%;
+    border-top: 1px solid $white;
+    padding: 5.4rem 0;
+  }
+  &__info {
+    @include flexbox($js:between, $ai:start);
+    @include mobile {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: $white;
+      font-family: 'Paperlogy';
+      flex: 1;
+      &.email {
+        text-align: right;
+      }
+    }
+    .sns-wrap {
+      @include flexbox();
+      flex: 1;
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 0 2rem;
+        @include mobile {
+          padding: 0;
+          padding-right: 2rem;
+        }
+        &:first-of-type {
+          &:after {
+            content:'';
+            position: absolute;
+            right: 0;
+            top: 3px;
+            width: 1px;
+            height: 10px;
+            background-color: $white;
+            @include mobile {
+              content: '';
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copy {
+    color: #555;
+    padding-top: 2rem;
+    text-align: center;
+    @include mobile {
+      text-align: left;
     }
   }
 }
@@ -557,16 +812,16 @@ $multiplier: 1;
       top: 0;
     }
     33.3% {
-      left: -$i * $size-of-shape + $size-of-shape+px;
+      left: calc(-#{$i} * var(--size-of-shape) + var(--size-of-shape));
       top: 0;
     }
     66.6% {
-      left: cos($i * $mult-number * 1deg) * $dist+px;
-      top: sin($i * $mult-number * 1deg) * $dist+px;
+      left: calc(cos(#{$i} * var(--mult-number) * 1deg) * var(--dist));
+      top: calc(sin(#{$i} * var(--mult-number) * 1deg) * var(--dist));
     }
     100% {
-      left: sin($i * $mult-number * 1deg) * $dist+px;
-      top: cos($i * $mult-number * 1deg) * $dist+px;
+      left: calc(sin(#{$i} * var(--mult-number) * 1deg) * var(--dist));
+      top: calc(cos(#{$i} * var(--mult-number) * 1deg) * var(--dist));
     }
   }
 
@@ -576,16 +831,48 @@ $multiplier: 1;
       top: 0;
     }
     33.3% {
-      left: -$i * $size-of-shape + $size-of-shape;
+      left: calc(-#{$i} * var(--size-of-shape) + var(--size-of-shape));
       top: 0;
     }
     66.6% {
-      left: sin($i * $mult-number * 1deg) * $dist+px;
-      top: cos($i * $mult-number * 1deg) * $dist+px;
+      left: calc(sin(#{$i} * var(--mult-number) * 1deg) * var(--dist));
+      top: calc(cos(#{$i} * var(--mult-number) * 1deg) * var(--dist));
     }
     100% {
-      left: cos($i * $mult-number * 1deg) * $dist+px;
-      top: sin($i * $mult-number * 1deg) * $dist+px;
+      left: calc(cos(#{$i} * var(--mult-number) * 1deg) * var(--dist));
+      top: calc(sin(#{$i} * var(--mult-number) * 1deg) * var(--dist));
     }
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+  100% {
+    left: 50%;
+    width: 100rem;
+    height: 40rem;
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+  100% {
+    right: 50%;
+    width: 100rem;
+    height: 40rem;
   }
 }

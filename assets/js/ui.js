@@ -500,3 +500,13 @@ ScrollTrigger.matchMedia({
     service.scrollTrigger.disable();
   }
 });
+
+$('.accordion__title').click(function(){
+  const $content = $(this).next('.accordion__con');
+  if ($content.is(':visible')) {
+    $content.slideUp();
+  } else {
+    $('.accordion__con').slideUp();
+    $content.slideDown();
+  }
+});
