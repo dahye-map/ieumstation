@@ -493,7 +493,7 @@
 }
 .section__text {
   position: relative;
-  height: 300vh;
+  height: 200vh;
 }
 .section__text .text-ani {
   position: absolute;
@@ -505,7 +505,6 @@
   font-weight: 600;
   font-family: "Paperlogy" !important;
   color: #fff;
-  will-change: transform, opacity;
 }
 @media (max-width: 800px) {
   .section__text .text-ani {
@@ -667,7 +666,7 @@
   }
 }
 .section__why .why__title {
-  font-size: calc(90px + 90 * (100vw - 1920px) / 1920);
+  font-size: calc(64px + 64 * (100vw - 1920px) / 1920);
   font-weight: 700;
   font-family: "Paperlogy";
   color: #ff811b;
@@ -693,7 +692,7 @@
   }
 }
 .section__why .accordion__list {
-  padding: 3.2rem 0;
+  padding: 4rem 0;
   border-top: 1px solid #fff;
 }
 @media (max-width: 800px) {
@@ -708,6 +707,7 @@
   color: #fff;
   font-weight: 500;
   padding-right: 3%;
+  line-height: 1.3;
 }
 .section__why .accordion__title:before {
   content: "";
@@ -796,6 +796,7 @@
 }
 .section__service .bg canvas {
   filter: grayscale(1);
+  opacity: 0.7;
 }
 .section__service .service-box__wrap {
   padding: 0 3%;

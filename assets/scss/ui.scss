@@ -118,7 +118,7 @@ $multiplier: 1;
   }
   &__text {
     position: relative;
-    height: 300vh;
+    height: 200vh;
     .text-ani {
       position: absolute;
       top: 36%;
@@ -129,7 +129,7 @@ $multiplier: 1;
       font-weight: 600;
       font-family: 'Paperlogy' !important;
       color: #fff;
-      will-change: transform, opacity;
+      // will-change: transform, opacity;
       @include mobile {
         font-size: 3.2rem;
         top: 45%;
@@ -271,7 +271,7 @@ $multiplier: 1;
       }
     }
     .why__title {
-      @include size(font, 90);
+      @include size(font, 64);
       font-weight: 700;
       font-family: 'Paperlogy';
       color: $txt_primary;
@@ -292,7 +292,7 @@ $multiplier: 1;
         }
       }
       &__list {
-        padding: 3.2rem 0;
+        padding: 4rem 0;
         border-top: 1px solid $white;
         @include mobile {
           padding: 2.4rem 0;
@@ -305,6 +305,7 @@ $multiplier: 1;
         color: $white;
         font-weight: 500;
         padding-right: space(60);
+        line-height: 1.3;
         &:before {
           content:'';
           position: absolute;
@@ -379,6 +380,7 @@ $multiplier: 1;
       transition: all .1s linear;
       canvas {
         filter: grayscale(1);
+        opacity: .7;
       }
     }
     .service {
