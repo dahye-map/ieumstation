@@ -118,7 +118,7 @@ $multiplier: 1;
   }
   &__text {
     position: relative;
-    height: 200vh;
+    height: 300vh;
     .text-ani {
       position: absolute;
       top: 36%;
@@ -129,7 +129,7 @@ $multiplier: 1;
       font-weight: 600;
       font-family: 'Paperlogy' !important;
       color: #fff;
-      // will-change: transform, opacity;
+      will-change: transform, opacity;
       @include mobile {
         font-size: 3.2rem;
         top: 45%;
@@ -533,26 +533,32 @@ $multiplier: 1;
         }
       }
       &-list {
+        margin-top: 1.6rem !important;
+        &__wrap {
+          position: relative;
+          padding: space(120) 3% space(200);
+          @include mobile {
+            padding: 4rem 3% 6rem;
+          }
+        }
+      }
+      &-content {
         @include flexbox($js:between);
         gap: space(24);
-        background-color: #111;
+        background-color: #222;
         border-radius: 5rem;
         padding: space(60) space(100);
         border: 2px solid #272727;
-        position: sticky;
-        top: space(80);
         will-change: transform, opacity;
+        @include tablet {
+          border-radius: 3rem;
+        }
         @include mobile {
           flex-direction: column;
           flex-wrap: wrap;
           align-items: start;
-        }
-        @include mobile {
           padding: 2.4rem 4rem;
           border-radius: 3rem;
-        }
-        & + .process-list {
-          margin-top: space(16);
         }
         .process-right {
           @include size(width, 470);
@@ -588,16 +594,6 @@ $multiplier: 1;
             @include mobile {
               font-size: 1.6rem;
             }
-          }
-        }
-        &__wrap {
-          position: relative;
-          padding: 12rem 3% 20rem;
-          @include tablet {
-            padding: 6rem 3% 10rem
-          }
-          @include mobile {
-            padding: 4rem 3% 6rem;
           }
         }
       }
@@ -688,7 +684,7 @@ $multiplier: 1;
     &__big {
       @include size(font, 74);
       font-weight: 700;
-      border-radius: 16rem;
+      border-radius: 30rem;
       border:5px solid $white;
       padding: space(90) space(150);
       font-family: 'Paperlogy';

@@ -1,3 +1,18 @@
+var inappdeny_exec_vanillajs = (callback) => {
+  if(document.readyState !== 'loading'){
+      callback();
+  }else{
+      document.addEventListener('DOMContentLoaded', callback);
+  }
+};
+inappdeny_exec_vanillajs(() => {
+  var useragt = navigator.userAgent.toLowerCase();
+  var target_url = location.href;
+  if(useragt.match(/kakaotalk/i)){
+      location.href = 'kakaotalk://web/openExternal?url='+encodeURIComponent(target_url);
+  }
+});
+
 function loading() {
   const canvas = document.querySelector("canvas");
   const gl = canvas.getContext("webgl");
@@ -263,14 +278,13 @@ function loading() {
   animate();
   nextTextTimeout = setTimeout(changeText, config.textChangeInterval);
 }
-
+loading();
 $('body').css({
   'height': '100vh',
   'overflow': 'hidden'
 })
 setTimeout(() => {
   $('.section__loading').fadeOut();
-  loading();
   $('body').css({
     'height': '100%',
     'overflow': 'auto'
@@ -416,7 +430,7 @@ let service = gsap.timeline({
     pinSpacing: true,
     start: "top",
     end: "+=100%",
-    scrub: 1,
+    scrub: 2,
     // markers: true,
   },
 });
@@ -429,7 +443,7 @@ service.to('.bg', {
 });
 service.to('.service-box__wrap', {
   transform: 'translateY(-100%)',
-  duration: 200,
+  duration: 3,
 });
 
 let processAni = gsap.to(".process-ani", {
@@ -444,29 +458,35 @@ let processAni = gsap.to(".process-ani", {
 });
 
 
-gsap.set(".process-list__wrap", {
-  perspective: "900px",
-});
-for (let i = 1; i <= 8; i++) {
-  gsap.to(`.process-list__wrap li:nth-of-type(${i})`, {
-    scale: 0.6 + i * 0.05, // 항목마다 조금씩 커지는 효과
-    rotateX: "-10deg", // 동일한 회전 효과
-    backgroundColor: "#403f3f", // 동일한 배경색
-    immediateRender: true,
-    scrollTrigger: {
-      trigger: `.process-list__wrap li:nth-of-type(${i})`,
-      start: "top 50%", // 각 항목의 시작 지점
-      end: i === 8 
-        ? "top 0%" // 마지막 항목은 별도의 종료 지점
-        : `top ${50 - i * 5}%`, // 중간 항목들은 종료 지점을 점진적으로 변경
-      endTrigger: i < 8 
-        ? `.process-list__wrap li:nth-of-type(${i + 1})` 
-        : undefined, // 다음 항목을 기준으로 종료 트리거 설정
-      scrub: true, // 스크롤에 맞춰 동기화
-      // markers: true, // 디버깅용 마커
-    },
+var panels = gsap.utils.toArray(".process-list");
+panels.pop();
+
+panels.forEach((panel, i) => {
+  let innerpanel = panel.querySelector(".process-content");
+  let panelHeight = innerpanel.offsetHeight;
+  let windowHeight = window.innerHeight;
+  let difference = panelHeight - windowHeight;
+  let fakeScrollRatio = difference > 0 ? (difference / (difference + windowHeight)) : 0;
+  if (fakeScrollRatio) {
+    panel.style.marginBottom = panelHeight * fakeScrollRatio + "px";
+  }
+  let process = gsap.timeline({
+    scrollTrigger:{
+      trigger: panel,
+      start: "top top",
+      end: () => fakeScrollRatio ? `+=${innerpanel.offsetHeight}` : "bottom top",
+      pinSpacing: false,
+      pin: true,
+      scrub: true
+    }
   });
-}
+  if (fakeScrollRatio) {
+    process.to(innerpanel, {y:-difference, duration: 1 / (1 - fakeScrollRatio) - 1, ease: "none"});
+  }
+  process.fromTo(panel, {scale:1, opacity:1}, {scale: 0.8, opacity: 0.8, duration: 0.9})
+    .to(panel, {opacity:0, duration: 0.1});
+});
+
 
 let portfolio = document.querySelector('.portfolio-list__wrap');
 let sections = gsap.utils.toArray(".portfolio-list");
