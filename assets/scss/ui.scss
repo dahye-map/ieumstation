@@ -62,7 +62,7 @@ $multiplier: 1;
 .section {
   overflow-x: hidden;
   &__loading {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     width: 100%;
     height: 100vh;

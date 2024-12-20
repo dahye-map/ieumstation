@@ -510,9 +510,7 @@ ScrollTrigger.matchMedia({
   },
   "(max-width: 1024px)": function() {
     scrollPortfolio.scrollTrigger.disable();
-  }
-});
-ScrollTrigger.matchMedia({
+  },
   "(min-width: 1025px)": function() {
     service.scrollTrigger.enable();
   },
