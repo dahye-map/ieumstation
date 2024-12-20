@@ -275,7 +275,7 @@ setTimeout(() => {
     'height': '100%',
     'overflow': 'auto'
   })
-}, 4000);
+}, 0);
 
 
 ScrollTrigger.create({
@@ -414,7 +414,7 @@ let service = gsap.timeline({
     trigger: ".section__service",
     pin: ".section__service",
     pinSpacing: true,
-    start: "top top",
+    start: "top",
     end: "+=100%",
     scrub: 1,
     // markers: true,
@@ -429,7 +429,7 @@ service.to('.bg', {
 });
 service.to('.service-box__wrap', {
   transform: 'translateY(-100%)',
-  duration: 3,
+  duration: 200,
 });
 
 let processAni = gsap.to(".process-ani", {

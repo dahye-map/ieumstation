@@ -60,6 +60,21 @@ $desktop: 1400px;
   }
 }
 
+@function space($size) {
+  @return round($size/1920*100%);
+}
+@mixin size($css:'', $size) {
+  @if($css == 'font') {
+    font-size: calc(#{$size}px + $size * (100vw - 1920px) / 1920);
+  }
+  @if($css == 'width') {
+    width: calc(#{$size}px + $size * (100vw - 1920px) / 1920);
+  }
+  @if($css == 'height') {
+    height: calc(#{$size}px + $size * (100vw - 1920px) / 1920);
+  }
+}
+
 $font_size_xxs: 1.2rem;
 $font_size_xs: 1.3rem;
 $font_size_s: 1.4rem;
