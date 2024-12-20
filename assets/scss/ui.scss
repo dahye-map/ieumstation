@@ -319,6 +319,7 @@ $multiplier: 1;
           width: 2px;
           height: 40px;
           background-color: $primary_color;
+          transition: all .3s;
           @include tablet {
             content:'';
             right: 18px;
@@ -350,6 +351,12 @@ $multiplier: 1;
             width: 24px;
             height: 1px;
             top: 14px;
+          }
+        }
+        &.active {
+          &:before {
+            content:'';
+            transform: rotate(90deg);
           }
         }
         @include mobile {
@@ -386,7 +393,7 @@ $multiplier: 1;
       transition: all .1s linear;
       canvas {
         filter: grayscale(1);
-        opacity: .7;
+        opacity: .5;
       }
     }
     .service {
@@ -427,7 +434,7 @@ $multiplier: 1;
           }
           .desc {
             @include size(font, 24);
-            padding-top: space(60);
+            padding-top: space(30);
             font-family: 'Paperlogy';
             color: #fff;
             font-weight: 300;
@@ -522,7 +529,7 @@ $multiplier: 1;
     .process {
       &-ani {
         @include flexbox();
-        gap: space(10);
+        gap: space(200);
         white-space: nowrap;
         position: relative;
         will-change: transform;

@@ -429,9 +429,9 @@ let service = gsap.timeline({
     trigger: ".section__service",
     pin: ".section__service",
     pinSpacing: true,
-    start: "top",
-    end: "+=100%",
-    scrub: 3,
+    start: "top top",
+    end: "+=300%",
+    scrub: 2,
     // markers: true,
   },
 });
@@ -440,15 +440,15 @@ gsap.set('.section__service .bg', {
 });
 service.to('.bg', {
   opacity: 1,
-  duration: .1,
+  duration: .05
 });
 service.to('.service-box__wrap', {
-  transform: 'translateY(-100%)',
-  duration: 3,
+  // transform: 'translateY(-100%)'
+  y: "-100%"
 });
 
 let processAni = gsap.to(".process-ani", {
-  xPercent: -50,
+  xPercent: -80,
   ease: "none",
   scrollTrigger: {
     trigger: ".process-ani__wrap",
@@ -522,10 +522,13 @@ ScrollTrigger.matchMedia({
 
 $('.accordion__title').click(function(){
   const $content = $(this).next('.accordion__con');
+  $('.accordion__title').removeClass('active')
   if ($content.is(':visible')) {
     $content.slideUp();
+    $(this).removeClass('active');
   } else {
     $('.accordion__con').slideUp();
     $content.slideDown();
+    $(this).addClass('active');
   }
 });
