@@ -425,12 +425,13 @@ function animation() {
 
 let service = gsap.timeline({
   scrollTrigger: {
+    ease:"none",
     trigger: ".section__service",
     pin: ".section__service",
     pinSpacing: true,
     start: "top",
     end: "+=100%",
-    scrub: 2,
+    scrub: 3,
     // markers: true,
   },
 });
@@ -447,7 +448,7 @@ service.to('.service-box__wrap', {
 });
 
 let processAni = gsap.to(".process-ani", {
-  xPercent: -100,
+  xPercent: -50,
   ease: "none",
   scrollTrigger: {
     trigger: ".process-ani__wrap",

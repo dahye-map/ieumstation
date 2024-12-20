@@ -523,6 +523,15 @@
     height: 100%;
   }
 }
+.section__text .text-ani .typing-ani {
+  font-weight: 300;
+  font-size: calc(68px + 68 * (100vw - 1920px) / 1920);
+}
+@media (max-width: 800px) {
+  .section__text .text-ani .typing-ani {
+    font-size: 3rem;
+  }
+}
 .section__text .text-ani .typing-ani:after {
   content: "|";
   display: inline;
@@ -770,6 +779,7 @@
   font-family: "Paperlogy";
   color: #fff;
   padding-top: 2%;
+  font-weight: 300;
 }
 @media (max-width: 800px) {
   .section__why .accordion__con {
@@ -848,6 +858,7 @@
   font-family: "Paperlogy";
   color: #fff;
   font-weight: 300;
+  line-height: 1.9;
 }
 @media (max-width: 1024px) {
   .section__service .service-text__wrap .desc {

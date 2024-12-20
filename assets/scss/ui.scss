@@ -143,6 +143,11 @@ $multiplier: 1;
         }
       }
       .typing-ani {
+        font-weight: 300;
+        @include size(font, 68);
+        @include mobile {
+          font-size: 3rem;
+        }
         &:after {
           content: '|';
           display: inline;
@@ -357,6 +362,7 @@ $multiplier: 1;
         font-family: 'Paperlogy';
         color: $white;
         padding-top: space(40);
+        font-weight: 300;
         @include mobile {
           font-size: 1.6rem;
           padding-top: 2.4rem;
@@ -425,6 +431,7 @@ $multiplier: 1;
             font-family: 'Paperlogy';
             color: #fff;
             font-weight: 300;
+            line-height: 1.9;
             @include tablet {
               width: 70%;
               margin: 0 auto;
