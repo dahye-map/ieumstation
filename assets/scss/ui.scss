@@ -497,23 +497,55 @@ $multiplier: 1;
             }
           }
           .sub-title {
-            @include size(font, 32);
-            font-weight: 500;
-            padding: space(100) 0 space(60);
+            @include size(font, 40);
+            font-weight: 700;
             font-family: 'Paperlogy';
             color: #fff;
             @include mobile {
               font-size: 2.4rem;
-              padding: 4rem 0 2.4rem;
+            }
+            &02 {
+              @include size(font, 24);
+              color: #a6a6a6;
+              padding-top: space(10);
+              font-weight: 500;
+              @include mobile {
+                font-size: 1.6rem;
+                padding-top: .8rem;
+              }
+            }
+            &__wrap {
+              padding: space(60) 0 space(80);
+              @include mobile {
+                padding: 3.2rem 0 4rem;
+              }
             }
           }
           .desc {
-            @include size(font, 24);
+            @include size(font, 28);
             font-family: 'Paperlogy';
             color: #fff;
             font-weight: 300;
+            line-height: 1.8;
             @include mobile {
               font-size: 1.6rem;
+            }
+            &__wrap {
+              .badge {
+                display: inline-block;
+                color: $txt_primary;
+                @include size(font, 18);
+                border-radius: 4rem;
+                border: 2px solid $primary_color;
+                padding: .4rem 3rem;
+                font-weight: 500;
+                margin-bottom: space(24);
+                @include mobile {
+                  padding: .2rem 2rem;
+                  font-size: 1.2rem;
+                  margin-bottom: 1rem;
+                }
+              }
             }
           }
         }

@@ -1413,27 +1413,63 @@
   }
 }
 .section__service .service-list__wrap .sub-title {
-  font-size: calc(32px + 32 * (100vw - 1920px) / 1920);
-  font-weight: 500;
-  padding: 5% 0 3%;
+  font-size: calc(40px + 40 * (100vw - 1920px) / 1920);
+  font-weight: 700;
   font-family: "Paperlogy";
   color: #fff;
 }
 @media (max-width: 800px) {
   .section__service .service-list__wrap .sub-title {
     font-size: 2.4rem;
-    padding: 4rem 0 2.4rem;
+  }
+}
+.section__service .service-list__wrap .sub-title02 {
+  font-size: calc(24px + 24 * (100vw - 1920px) / 1920);
+  color: #a6a6a6;
+  padding-top: 1%;
+  font-weight: 500;
+}
+@media (max-width: 800px) {
+  .section__service .service-list__wrap .sub-title02 {
+    font-size: 1.6rem;
+    padding-top: 0.8rem;
+  }
+}
+.section__service .service-list__wrap .sub-title__wrap {
+  padding: 3% 0 4%;
+}
+@media (max-width: 800px) {
+  .section__service .service-list__wrap .sub-title__wrap {
+    padding: 3.2rem 0 4rem;
   }
 }
 .section__service .service-list__wrap .desc {
-  font-size: calc(24px + 24 * (100vw - 1920px) / 1920);
+  font-size: calc(28px + 28 * (100vw - 1920px) / 1920);
   font-family: "Paperlogy";
   color: #fff;
   font-weight: 300;
+  line-height: 1.8;
 }
 @media (max-width: 800px) {
   .section__service .service-list__wrap .desc {
     font-size: 1.6rem;
+  }
+}
+.section__service .service-list__wrap .desc__wrap .badge {
+  display: inline-block;
+  color: #ff811b;
+  font-size: calc(18px + 18 * (100vw - 1920px) / 1920);
+  border-radius: 4rem;
+  border: 2px solid #ff811b;
+  padding: 0.4rem 3rem;
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+@media (max-width: 800px) {
+  .section__service .service-list__wrap .desc__wrap .badge {
+    padding: 0.2rem 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 }
 .section__process {
