@@ -474,7 +474,7 @@ panels.forEach((panel, i) => {
   let process = gsap.timeline({
     scrollTrigger:{
       trigger: panel,
-      start: "top top",
+      start: "top-=60px top", // 스크롤 시작 지점을 100px 아래로 조정
       end: () => fakeScrollRatio ? `+=${innerpanel.offsetHeight}` : "bottom top",
       pinSpacing: false,
       pin: true,
